@@ -1,0 +1,107 @@
+:root {
+  --bg-main-color: #00000080;
+
+  --bg-accent-color: #2d2d2d;
+
+  --accent-color: #f64435;
+
+  --text-accent-color: #ffe498;
+
+  --text-edit-bg-color: #575757;
+
+  --border-color: #3f3f3f;
+
+  --shadow-color: #202020;
+
+  --document-bg-color: #68686850;
+
+  --component-bg-gradient: radial-gradient(
+    circle,
+    #646464e6 0%,
+    #363636e6 100%
+  );
+
+  --smokywhite: #dddbd8;
+
+  --black: #000000;
+
+  --translucent-black: #00000099;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-image: url("/images/background.png");
+  margin: 0;
+  object-fit: cover;
+  justify-content: center;
+}
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  background: white;
+  padding: 24px 16px;
+  border-radius: 4px;
+  width: 320px;
+}
+
+.modal__titleInput,
+.modal__bodyInput {
+  display: flex;
+  flex-direction: column;
+}
+.motionApp {
+  height: 100vh;
+  width: 80%;
+}
+.motionApp__header {
+  flex-direction: column;
+  margin-top: 10px;
+  height: 15vh;
+  font-size: 2rem;
+  text-align: center;
+  background-color: var(--text-edit-bg-color);
+}
+.header__title {
+  color: white;
+  padding: 10px;
+}
+.header__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 15px;
+  background-color: lightpink;
+  border: none;
+  border-radius: 8px;
+}
+.motionApp__body {
+  height: 75vh;
+  background-color: var(--bg-accent-color);
+}
+.motionApp__footer {
+  display: flex;
+  justify-content: center;
+  line-height: 5vh;
+  height: 5vh;
+  font-size: 1.3rem;
+  color: white;
+  background-color: var(--text-edit-bg-color);
+}
