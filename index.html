@@ -4,27 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Motion</title>
-    <script></script>
+    <script type="module" src="./build/main.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="motionApp">
-      <div class="modal-wrapper">
+      <div class="modal-wrapper" id="modal-wrapper" style="display: none">
         <div class="modal">
           <div class="modal__closeBtn">
-            <button>X</button>
+            <button id="closeModal">X</button>
           </div>
-          <div class="modal__titleInput">
-            <label>Title</label>
-            <input />
-          </div>
-          <div class="modal__bodyInput">
-            <label>URL</label>
-            <input />
-          </div>
-          <div class="modal_addBtn">
-            <button>add</button>
-          </div>
+          <form id="modal__submit">
+            <div class="modal__titleInput">
+              <label>Title</label>
+              <input id="title-input" />
+            </div>
+            <div class="modal__bodyInput">
+              <label class="modal__inputTarget">URL</label>
+              <input id="body-input" />
+            </div>
+            <div class="modal__addBtn">
+              <button>add</button>
+            </div>
+          </form>
         </div>
       </div>
       <header class="motionApp__header">
@@ -32,13 +34,29 @@
           <span>MOTION</span>
         </div>
         <div class="header__btns">
-          <button class="imageBtn">IMAGE</button>
-          <button class="videoBtn">VIDEO</button>
-          <button class="noteBtn">NOTE</button>
-          <button class="taskBtn">TASK</button>
+          <button id="imageBtn">IMAGE</button>
+          <button id="videoBtn">VIDEO</button>
+          <button id="noteBtn">NOTE</button>
+          <button id="taskBtn">TASK</button>
         </div>
       </header>
-      <section class="motionApp__body"></section>
+      <section class="motionApp__body">
+        <ul class="card__lists" id="card__list">
+          <div class="body__card">
+            <iframe
+              width="1100"
+              height="315"
+              src="https://www.youtube.com/embed/AnR_PnA073g"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="card__body">
+              <span>HI</span> <button class="card__delete">X</button>
+            </div>
+          </div>
+        </ul>
+      </section>
       <footer class="motionApp__footer">
         <div class="footer__rights">
           <span>@ Copyright by Kwongiseok. All rights reserved</span>
